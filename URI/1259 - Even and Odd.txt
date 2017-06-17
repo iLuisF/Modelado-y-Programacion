@@ -1,0 +1,107 @@
+import java.util.Arrays;
+import java.util.Scanner;
+import java.util.Stack;
+ 
+/**
+ * Ordena los numeros de entrada de acuerdo al siguiente criterio. Los numeros
+ * pares los ordena ascendentemente y los numeros impares descendentemente.
+ * Ademas primero los pares y depues los impares uno por cada linea.
+ *
+ * @author Flores González Luis Brandon.
+ * @version 1.0
+ */
+public class Main {
+ 
+    /**
+     * Ordena segun el criterio especificado N números de enteros con (1 < N <
+     * 10^5).
+     *
+     * @param args Sin uso.
+     */
+    public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in);
+        //ParImpar parImpar = new ParImpar();
+        ParImpar parImpar = new ParImpar();
+        int N = leer.nextInt();
+        int[] par = new int[N];
+        int[] impar = new int[N];
+        int contadorPar = 0;
+        int contadorImpar = 0;
+        for (int i = 0; i < N; i++) {
+            int numero = leer.nextInt();
+            if ((numero % 2) == 0) {//Par
+                par[contadorPar] = numero;
+                contadorPar++;
+            } else {//Impar
+                impar[contadorImpar] = numero;
+                contadorImpar++;
+            }
+        }
+        parImpar.mostrarArreglo(parImpar.ordenarArreglo(par),
+                parImpar.reversaArreglo(parImpar.ordenarArreglo(impar)));
+ 
+    }
+ 
+    /**
+     * Ordena los numeros de entrada de acuerdo al siguiente criterio. Los
+     * numeros pares los ordena ascendentemente y los numeros impares
+     * descendentemente. Ademas primero los pares y depues los impares uno por
+     * cada linea.
+     *
+     * @author Flores González Luis Brandon.
+     * @version 1.0
+     */
+    static class ParImpar {
+ 
+        /**
+         * Ordena un arreglo de forma ascendente.
+         *
+         * @param arreglo Arreglo a ordenar.
+         * @return Arreglo ordenado de forma ascendente.
+         */
+        public int[] ordenarArreglo(int[] arreglo) {
+            Arrays.sort(arreglo);
+            return arreglo;
+        }
+ 
+        /**
+         * Regresa el orden contrario del arreglo.
+         *
+         * @param arreglo Arreglo de enteros.
+         * @return Arreglo en orden contrario.
+         */
+        public int[] reversaArreglo(int[] arreglo) {
+            Stack<Integer> reversaArreglo = new Stack();
+            int[] reversa = new int[100000];
+            for (int i = 0; i < arreglo.length; i++) {
+                reversaArreglo.push(arreglo[i]);
+            }
+            for (int i = 0; i < arreglo.length; i++) {
+                reversa[i] = reversaArreglo.pop();
+            }
+            return reversa;
+        }
+ 
+        /**
+         * Muestra ambos arreglos (Pares e impares), primero de forma ascendente
+         * los numeros pares y en seguida sin espacios los numeros impares.
+         *
+         * @param arregloPar Numeros pares.
+         * @param arregloImpar Numeros impares.
+         */
+        public void mostrarArreglo(int[] arregloPar, int[] arregloImpar) {
+            for (int i = 0; i < arregloPar.length; i++) {
+                if (arregloPar[i] != 0) {
+                    System.out.println(arregloPar[i]);
+                }
+            }
+            for (int i = 0; i < arregloImpar.length; i++) {
+                if (arregloImpar[i] != 0) {
+                    System.out.println(arregloImpar[i]);
+                }
+            }
+        }
+ 
+    }
+ 
+}

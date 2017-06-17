@@ -1,0 +1,39 @@
+import java.util.Scanner;
+import java.util.Stack;
+ 
+public class Main {
+ 
+    public static boolean esBalanceado(String cadena) {
+        Stack<Character> pilita = new Stack<>();
+        char[] caracteres = cadena.toCharArray();
+        for (int i = 0; i < caracteres.length; i++) {
+            if (caracteres[i] == '(') {
+                pilita.add('(');
+            }
+            if (caracteres[i] == ')') {
+                if (pilita.empty()) {
+                    return false;
+                }
+                pilita.pop();
+            }
+        }
+        return pilita.empty();
+    }
+     
+    public static String esCorrecto(boolean esCorrecto){
+        if(esCorrecto){
+            return "correct";
+        }else{
+            return "incorrect";
+        }
+    }
+ 
+    public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in);  
+        String N;
+        while(leer.hasNext()){
+            N = leer.next();
+            System.out.println(esCorrecto(esBalanceado(N)));
+        }
+    }
+}

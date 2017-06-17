@@ -1,0 +1,18 @@
+Este es un documento para probar el esquema de Shamir.
+Este método sirve para encriptar una llave k, y para
+acceder a ella se necesitan 1 < t <= n puntos
+tal que n es el número de puntos totales repartidos.
+
+La llave k se genera con sha-256 apartir de una 
+contraseña dada por el usuario, esto porque el usuario
+no suele dar contraseñas "seguras".
+
+Esta llave k servira para encriptar y desencriptar
+cualquier archivo dado por el usuario, para encriptar
+estos se usa aes.
+
+Esto es ambiguo ya que solo es un documento de prueba, 
+toda la información del funcionamiento se encuentra
+correctamente comentada en Javadoc, en el README y 
+claro se siguio las especificaciones asignadas en el 
+PDF del profesor.

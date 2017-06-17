@@ -1,0 +1,19 @@
+import java.util.Scanner;
+ 
+public class Main {
+ 
+    public static double getArea(double R) {
+        double A = 3.14159 * R * R;
+        return A;
+    }
+ 
+    public static void main(String[] args) {        
+        double R, A;
+        Scanner leer = new Scanner(System.in);
+        R = leer.nextDouble();
+        A = getArea(R);
+        System.out.print("A=");
+        System.out.printf("%.4f%n", A);
+    }
+ 
+}

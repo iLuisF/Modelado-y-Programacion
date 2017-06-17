@@ -1,0 +1,41 @@
+Nombre: Flores Gonzalez Luis Brandon
+Numero de cuenta: 312218342
+Correo: iluis@ciencias.unam.mx
+
+Manera de compilar y ejecutar el programa:
+
+El programa se compilo y ejecuto desde Ubuntu.
+
+1. Se debe estar en la carpeta src para compilar lo que se requiere.
+
+javac Main.java
+
+2. Para ejecutar el programa desde la misma carpeta src se debe escribir el siguiente comando.
+
+java Main DIA MES AÑO
+
+Donde el formato anterior corresponde a:
+
+- DIA: Dos digitos a lo más para el día del mes.
+- MES: Al menos tres caracteres para el nombre del mes en español.
+- AÑO: Exactamente 4 digitos para el año.
+
+Ejemplos de entradas correctas desde la terminal:
+
+java Main 22 agosto 2015
+
+java Main 30 agosto 2015
+
+java Main 7 marzo 2006
+
+--------------------------------------------
+
+Ejemplos de entradas incorrectas desde la terminal:
+
+java Main 32 agosto 2015
+
+java Main 6 octubre de 1582
+
+java Main 22 agdsa 2015
+
+Correlación: Alfonso Caso - Nicholson's veintena

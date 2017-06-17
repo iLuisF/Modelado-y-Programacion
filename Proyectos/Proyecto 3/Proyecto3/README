@@ -1,0 +1,64 @@
+Integrantes:
+- Flores González Luis Brandon.
+- Numero de cuenta: 312218342
+- iluis@ciencias.unam.mx
+
+- Jaime Garcia Argueta
+- 312104739
+- jaimegarciaargueta@ciencias.unam.mx
+
+Manera de compilar y ejecutar el programa:
+
+El programa se compilo y ejecuto desde la terminal de linux.
+1. Se debe estar en la carpeta src para compilar lo que se requiere. Ademas los archivos 
+se leen y escribe en esta carpeta src.
+
+javac Main.java
+
+2. Para ejecutar el programa desde la misma carpeta src se debe escribir el siguiente comando.
+
+java Main args[0] args[1] args[2] args[3] args[4]
+
+Donde:
+
+En caso de encriptar.
+
+args[0]: 'c' (Caracter c)
+args[1]: El nombre del archivo en el que serán guardadas las n evaluaciones del polinomio.
+args[2]: El número total de evaluaciones requeridas (n>2)
+args[3]: El número minimo de puntos necesarios para descifrar (1 < k <= n)
+args[4]: El nombre del archivo con el documento claro a encriptar.
+
+
+En caso de desencriptar.
+
+args[0]: 'd' (Caracter d)
+args[1]: El nombre del archivo con, al menos, k de las n evaluaciones del polinomio.
+args[2]: El nombre del archivo cifrado.
+args[3]: Sin uso. 
+args[4]: Sin uso.
+
+Ejemplo de entrada funcionando(los documentos para correr este ejemplo vienen ya incluidos).
+
+- Encriptando archivo
+
+java Main c nEvaluaciones 5 3 Prueba
+
+--> En seguida el programa pedira la contraseña en la terminal sin causar eco. Se ingresa la contraseña...
+ciencias2015
+
+- Desencriptando archivo
+
+java Main d nEvaluaciones Prueba
+
+Como mencione, los archivos necesarios para ejecutar el ejemplo ya estan incluidos. Por lo que no habra
+problema si se usa el ejemplo.
+
+
+
+
+
+
+
+
+
